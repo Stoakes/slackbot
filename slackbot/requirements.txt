@@ -1,0 +1,3 @@
+slackclient==2.4.0
+certifi>=2019.11.28
+requests==2.7.0
