@@ -16,7 +16,8 @@ class CommandsRegistry:
 
     def answer(self, text: str, thread_ts,  confirm: bool):
         blocks = []
-        blocks.append(hello(text, thread_ts, confirm).get_content())
+        for cmd in self.commands:
+			blocks.append(cmd(text, thread_ts, confirm).get_content())
         blocks = self.flatten(blocks)
         
         return blocks
